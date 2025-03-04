@@ -51,10 +51,13 @@ function printScore(user, computer) {
 function evalGame(playerScore, computerScore) {
   if (playerScore === computerScore) {
     console.log("It's a draw!");
+    alert("It's a draw!");
   } else if (humanScore > computerScore) {
     console.log("You win!");
+    alert("You win!");
   } else {
     console.log("The computer wins!");
+    alert("The computer wins!");
   }
 }
 
