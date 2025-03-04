@@ -1,4 +1,9 @@
-//Function must randomly return rock paper or scrissors (use Math.random)
+// Breaking the problem down into smaller bits
+
+// 1.) Create a get function that returns a random number 1-3. THis is the computers choice
+// 2.) Create a get function that returns the users human players choice of rock, paper, or scissors
+// 3.) Users choice is a word, but computers choice is a number. Create a function that converts the humans choice into a number
+// 4.) Human choice and computer choice are now comparible. Create a function that
 
 //write a function that takes the users choice of rock paper or scissors (use prompt method)
 //to make sure that the user enters a correct choice and to account for incorrect input, use a while or do while loop. for example, while the input is !== to correct input, call function to prompt again.
@@ -67,22 +72,23 @@ const getComputerChoice = () => {
 
 const getHumanChoice = () => {
   let choice = prompt("Rock, Paper, or Scissors?").toLowerCase();
-
-  if (choice === "rock" || choice === "paper" || choice === "scissors") {
-    switch (choice) {
-      case "rock":
-        return 1;
-      case "paper":
-        return 2;
-      case "scissors":
-        return 3;
-    }
-  } else {
-    //if no value is returned, then the user entry is invalid
-    alert(`${choice} is not a valid choice`);
-    getHumanChoice();
+  while (!(choice === "rock" || choice === "paper" || choice === "scissors")) {
+    alert(`${choice} is not a valid entry`);
+    choice = prompt("Rock, Paper, or Scissors?").toLowerCase();
   }
+  return convertHumanChoiceToNumber(choice);
 };
+
+function convertHumanChoiceToNumber(str) {
+  switch (str) {
+    case "rock":
+      return 1;
+    case "paper":
+      return 2;
+    case "scissors":
+      return 3;
+  }
+}
 
 const roundEval = (userChoice, computerChoice) => {
   printChoices(userChoice, computerChoice);
