@@ -18,8 +18,8 @@ let computerScore = 0;
 let computerChoice;
 let humanChoice;
 
-function printChoices(player, computer) {
-  let userChoiceToText;
+function printChoices(human, computer) {
+  let humanChoiceToText;
   let computerChoiceToText;
 
   switch (computer) {
@@ -34,27 +34,27 @@ function printChoices(player, computer) {
       break;
   }
 
-  switch (player) {
+  switch (human) {
     case 1:
-      userChoiceToText = "rock";
+      humanChoiceToText = "rock";
       break;
     case 2:
-      userChoiceToText = "paper";
+      humanChoiceToText = "paper";
       break;
     case 3:
-      userChoiceToText = "scissors";
+      humanChoiceToText = "scissors";
       break;
   }
 
-  console.log(`You: ${userChoiceToText}\nComputer: ${computerChoiceToText}`);
+  console.log(`You: ${humanChoiceToText}\nComputer: ${computerChoiceToText}`);
 }
 
-function printScore(user, computer) {
-  console.log(`You: ${user}, Computer: ${computer}`);
+function printScore(human, computer) {
+  console.log(`You: ${human}, Computer: ${computer}`);
 }
 
-function evalGame(playerScore, computerScore) {
-  if (playerScore === computerScore) {
+function evalGame(humanScore, computerScore) {
+  if (humanScore === computerScore) {
     console.log("It's a draw!");
     alert("It's a draw!");
   } else if (humanScore > computerScore) {
@@ -90,9 +90,9 @@ function convertHumanChoiceToNumber(str) {
   }
 }
 
-const roundEval = (userChoice, computerChoice) => {
-  printChoices(userChoice, computerChoice);
-  if (userChoice === computerChoice) {
+const roundEval = (humanChoice, computerChoice) => {
+  printChoices(humanChoice, computerChoice);
+  if (humanChoice === computerChoice) {
     console.log("It's a draw!");
     console.log(`\n`);
 
@@ -100,9 +100,9 @@ const roundEval = (userChoice, computerChoice) => {
   }
 
   if (
-    (userChoice === 1 && computerChoice === 3) ||
-    (userChoice === 2 && computerChoice === 1) ||
-    (userChoice === 3 && computerChoice === 2)
+    (humanChoice === 1 && computerChoice === 3) ||
+    (humanChoice === 2 && computerChoice === 1) ||
+    (humanChoice === 3 && computerChoice === 2)
   ) {
     console.log("You win this round!");
     console.log(`\n`);
@@ -122,7 +122,7 @@ function gameStart() {
     //get human choice
     humanChoice = getHumanChoice();
 
-    //evaluate if the player or the computer won
+    //evaluate if the human or the computer won
     roundEval(humanChoice, computerChoice);
     roundCount++;
   } while (humanScore < 3 && computerScore < 3 && roundCount <= 5);
