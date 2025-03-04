@@ -10,4 +10,4 @@
 
 - If you and your opponent choose the same tool, neither player gets a point
 
-- Whoever gets a score of 3 first wins the game, else the game continues
+- The first player to score 3 points wins the game, else the game continues
