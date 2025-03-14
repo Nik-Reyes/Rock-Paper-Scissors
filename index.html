@@ -4,8 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="title-container">
+        <h1 class="title">Rock Paper Scissors</h1>
+      </div>
+
+      <div class="content">
+        <div class="content-box">
+          <div class="hidden">
+            <div class="computer-choice">
+              <h1 id="computer-choice-header">Computer choice:</h1>
+            </div>
+            <div class="game-box">
+              <div class="score">
+                <h1 id="score-title">Score</h1>
+                <div class="score-box">
+                  <h2 id="human-score">You:</h2>
+                  <h2 id="computer-score">Computer:</h2>
+                  <h2 id="draw-count">Draws:</h2>
+                </div>
+              </div>
+              <div class="game-buttons">
+                <h1 class="rps-choice">Choose one</h1>
+                <button class="btn">
+                  <p><strong>Rock</strong></p>
+                </button>
+                <button class="btn">
+                  <p><strong>Paper</strong></p>
+                </button>
+                <button class="btn">
+                  <p><strong>Scissors</strong></p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="play-button">
+            <p class="play-text">Press to play!</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
