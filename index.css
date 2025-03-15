@@ -147,6 +147,29 @@ body {
   margin-bottom: 10px;
 }
 
-/* .hidden {
+#result-container {
+  padding: 15px;
+}
+
+#result-display {
+  color: red;
+  font-size: 60px;
+  text-align: center;
+}
+
+.hidden {
   display: none;
-} */
+}
+
+.fade-in {
+  animation: fadein 1s ease-in forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
