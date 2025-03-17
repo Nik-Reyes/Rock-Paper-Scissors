@@ -4,7 +4,6 @@ const drawText = document.querySelector("#draw-count");
 let roundCount = document.querySelector("#round-count");
 const playButton = document.querySelector(".play-button");
 const playBox = document.querySelector(".hidden");
-const content = document.querySelector(".content");
 const resultContainer = document.querySelector("#result-container");
 const resultDisplay = document.querySelector("#result-display");
 
@@ -120,7 +119,7 @@ buttons.addEventListener("click", handleButtonClick);
 playButton.addEventListener("click", () => {
   playButton.remove();
   playBox.classList.remove("hidden");
-  content.classList.add("fade-in");
+  playBox.classList.add("fade-in");
 });
 
 //to do
