@@ -120,6 +120,15 @@ buttons.addEventListener("click", handleButtonClick);
 playButton.addEventListener("click", () => {
   playButton.remove();
   playBox.classList.remove("hidden");
-  playBox.classList.add("fade-in");
   content.classList.add("fade-in");
 });
+
+//to do
+// add a fadeout class selector to css
+// add a set timeout fow ehn I click the play button
+// play button fades when its clicked
+//timout takes 1 second (same as fadeout)
+//Soon as fadeout is done and timeout are done
+//remove the playbutton and display the content box
+//Make the content fixed height
+// apply hidden to content-inner
